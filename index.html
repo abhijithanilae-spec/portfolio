@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abhijith Anilkumar — Data Analyst</title>
+<meta name="description" content="Data Analyst specialising in A/B testing, SQL and GA4 for e-commerce. Grew monthly sales 14x and lifted checkouts 30%.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7fb;--surface:#fff;--surface2:#eef0f7;--text:#12141c;--muted:#5b6174;--line:#dfe2ee;
+  --accent:#4f46e5;--accent2:#0891b2;--glow:rgba(79,70,229,.12);
+  color-scheme:light;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a0c12;--surface:#12151f;--surface2:#171b28;--text:#e8eaf2;--muted:#8d94ab;--line:#232840;
+    --accent:#818cf8;--accent2:#22d3ee;--glow:rgba(129,140,248,.14);color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a0c12;--surface:#12151f;--surface2:#171b28;--text:#e8eaf2;--muted:#8d94ab;--line:#232840;
+  --accent:#818cf8;--accent2:#22d3ee;--glow:rgba(129,140,248,.14);color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:700;letter-spacing:-.02em}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:22px;font-size:14px;color:var(--muted);align-items:center}
+.links a:hover{color:var(--text)}
+#theme{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:15px}
+@media(max-width:720px){.links a{display:none}}
+.hero{padding:84px 0 56px;background:radial-gradient(60% 50% at 80% 0%,var(--glow),transparent 70%)}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);border:1px solid var(--line);background:var(--surface);padding:6px 12px;border-radius:99px}
+.dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.05;letter-spacing:-.04em;margin:22px 0 16px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:660px;color:var(--muted);font-size:18px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:12px 20px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--surface)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.stat b{display:block;font-size:34px;letter-spacing:-.03em;color:var(--accent)}
+.stat small{color:var(--muted);font-size:13px}
+section{padding:68px 0}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2)}
+h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.03em;margin:8px 0 10px;line-height:1.15}
+.sub{color:var(--muted);max-width:640px;margin:0 0 34px}
+.stack{display:grid;gap:10px}
+.layer{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;transition:.2s}
+.layer:hover{border-color:var(--accent);background:var(--surface2)}
+.layer .n{font-size:13px;color:var(--accent)}
+.layer h3{margin:0;font-size:16px}
+.layer p{margin:2px 0 0;font-size:14px;color:var(--muted)}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){.case{grid-template-columns:1fr}}
+.case h4{margin:0 0 6px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2)}
+.case p{margin:0;font-size:15px;color:var(--muted)}
+.tl{border-left:1px solid var(--line);margin-left:6px;padding-left:26px;display:grid;gap:34px}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-32px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--glow)}
+.job h3{margin:0;font-size:19px}
+.job .meta{font-size:13px;color:var(--muted);margin:2px 0 10px}
+.job ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
+.job li{margin:5px 0}
+.job li b{color:var(--text);font-weight:600}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 4px;font-size:17px}
+.card .meta{font-size:12px;color:var(--muted);margin-bottom:10px}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:760px){.skills{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.chip{font-size:12px;padding:5px 10px;border-radius:7px;background:var(--surface2);border:1px solid var(--line);color:var(--muted)}
+.contact{text-align:center;background:radial-gradient(50% 80% at 50% 0%,var(--glow),transparent 70%)}
+.contact .cta{justify-content:center}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}
+html.sw-lock{overflow:hidden}
+.bx{opacity:0;transform:translateY(12px) scale(.985)}
+.bx.on{opacity:1;transform:none;transition:opacity .5s,transform .55s cubic-bezier(.2,.8,.2,1)}
+#swl{position:fixed;inset:0;z-index:50;pointer-events:none;overflow:hidden}
+.cur{position:absolute;left:0;top:0;will-change:transform}
+.cur svg{display:block;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+.tg,.sel em,.mk em{font:500 11px "JetBrains Mono",ui-monospace,monospace;color:#fff;padding:3px 8px;border-radius:6px;white-space:nowrap}
+.cur .tg{position:absolute;left:14px;top:16px}
+.sel{position:absolute;border:1px solid var(--c);transition:opacity .35s}
+.sel.out{opacity:0}
+.sel i{position:absolute;width:6px;height:6px;background:#fff;border:1px solid var(--c)}
+.sel i:nth-child(1){left:-4px;top:-4px}.sel i:nth-child(2){right:-4px;top:-4px}.sel i:nth-child(3){left:-4px;bottom:-4px}.sel i:nth-child(4){right:-4px;bottom:-4px}
+.sel em{position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);background:var(--c)}
+.gl{position:absolute;border:0 dashed var(--c);opacity:0;animation:gf 1s ease-out forwards}
+.gv{top:0;bottom:0;border-left-width:1px}.gh{left:0;right:0;border-top-width:1px}
+@keyframes gf{0%{opacity:0}25%{opacity:.5}100%{opacity:0}}
+.mk{position:absolute;color:var(--c);animation:mk 1.4s ease-out forwards}
+.mk b{position:absolute;left:-9px;top:-14px;font:500 22px/1 "JetBrains Mono",ui-monospace,monospace}
+.mk em{position:absolute;left:8px;top:6px;background:var(--c)}
+@keyframes mk{0%{opacity:0;transform:scale(.6)}15%{opacity:1;transform:none}80%{opacity:1}100%{opacity:0}}
+#swp{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:60;display:flex;align-items:center;gap:10px;background:#0d0f17;color:#fff;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:8px 8px 8px 14px;font:500 13px Inter,system-ui,sans-serif;box-shadow:0 10px 40px rgba(0,0,0,.35);white-space:nowrap}
+#swb{background:#1e2230;color:#fff;border:0;border-radius:11px;padding:9px 16px;font:inherit;cursor:pointer}
+#swb:hover{background:#2a3045}
+.rp{position:absolute;width:12px;height:12px;margin:-6px 0 0 -6px;border:2px solid var(--c);border-radius:50%;animation:rp .6s ease-out forwards}
+@keyframes rp{from{opacity:.9;transform:scale(.4)}to{opacity:0;transform:scale(3.2)}}
+.sel{animation:pp .25s ease-out}
+@keyframes pp{from{transform:scale(1.05);opacity:.3}}
+#swd{position:absolute;left:0;top:0;width:100%;z-index:50;pointer-events:none;overflow:hidden}
+.cur svg{transition:transform .08s ease-out;transform-origin:2px 2px}
+.sel{background:color-mix(in srgb,var(--c) 7%,transparent)}
+@media(prefers-reduced-motion:reduce){.sw-wip::after,.gl,.mk,.rp,.sel{animation:none}}
+.rv{opacity:0;transform:translateY(14px);transition:.6s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.boot header>.wrap,.boot section>.wrap,.boot nav,.boot footer{opacity:0}
+</style>
+<script>document.documentElement.classList.add("boot");setTimeout(function(){document.documentElement.classList.remove("boot")},4000)</script>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo mono" href="#top">abhijith<span>.</span>ae</a>
+  <div class="links"><a href="#stack">Approach</a><a href="#work">Case study</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a><button id="theme" aria-label="Toggle theme">◐</button></div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <span class="badge mono"><i class="dot"></i> Open to Data Analyst roles · Dubai &amp; UAE</span>
+  <h1>Turning messy funnels into <em>measurable growth.</em></h1>
+  <p class="lead">I’m Abhijith Anilkumar, a Data Analyst with 2+ years in e-commerce analytics. I run structured A/B tests, unify Shopify and ad data with SQL and Python, and turn GA4 funnels into decisions that move revenue.</p>
+  <div class="cta"><a class="btn p" href="#work">See the impact</a><a class="btn" href="mailto:abhijithanil.ae@gmail.com">Get in touch</a><button class="btn swbtn">⚡ Swarm rebuild</button></div>
+  <div class="stats">
+    <div class="stat"><b class="mono">14x</b><small>Monthly sales, AED 17K → 250K in 9 months</small></div>
+    <div class="stat"><b class="mono">+30%</b><small>Checkouts from GA4 funnel-driven budget shifts</small></div>
+    <div class="stat"><b class="mono">+400%</b><small>Website sessions</small></div>
+    <div class="stat"><b class="mono">+197%</b><small>Conversion rate improvement</small></div>
+  </div>
+</div></header>
+
+<section id="stack"><div class="wrap rv">
+  <div class="eyebrow mono">// how I work</div>
+  <h2>A seven-layer analytics workflow</h2>
+  <p class="sub">From raw clicks to a decision a team can act on. Every layer is checked before the next one builds on it.</p>
+  <div class="stack">
+    <div class="layer"><span class="n mono">L1</span><div><h3>Tracking &amp; collection</h3><p>UTM tagging, GA4 events, Shopify and Meta Ads sources, Search Console.</p></div></div>
+    <div class="layer"><span class="n mono">L2</span><div><h3>Integration &amp; automation</h3><p>Python and API extraction scripts that unify separate reporting sources into one workflow.</p></div></div>
+    <div class="layer"><span class="n mono">L3</span><div><h3>Data validation &amp; QA</h3><p>Cleaning, consistency checks and reconciliation before anything is reported.</p></div></div>
+    <div class="layer"><span class="n mono">L4</span><div><h3>Modelling in SQL</h3><p>CTEs and window functions (RANK, PARTITION BY) for product and category revenue share.</p></div></div>
+    <div class="layer"><span class="n mono">L5</span><div><h3>Experimentation</h3><p>Power analysis at 80% power and 95% confidence, chi-square confirmation at p &lt; 0.05.</p></div></div>
+    <div class="layer"><span class="n mono">L6</span><div><h3>Diagnosis &amp; visualisation</h3><p>GA4 funnel exploration, device, source and segment breakdowns; Power BI, Tableau, Dash/Plotly.</p></div></div>
+    <div class="layer"><span class="n mono">L7</span><div><h3>Action</h3><p>Findings translated for marketing, design, development and sales so budget moves where it works.</p></div></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap rv">
+  <div class="eyebrow mono">// case study</div>
+  <h2>The age-gate leak: +30% checkouts</h2>
+  <p class="sub">High Meta click-through rates, but few Shopify checkouts. Where were people going?</p>
+  <div class="case">
+    <div><h4>Problem</h4><p>Ads were getting clicks but the checkout count didn’t follow, and top-line reporting couldn’t explain the gap.</p></div>
+    <div><h4>Method</h4><p>Tagged every ad with UTM parameters, mapped them into a GA4 Funnel Exploration and joined the result with Shopify data.</p></div>
+    <div><h4>Result</h4><p>One creative’s visitors dropped off at the 21+ age-verification step. I paused it, moved budget to the creative driving verified transactions, and checkouts rose 30%.</p></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap rv">
+  <div class="eyebrow mono">// experience</div>
+  <h2>Where I’ve worked</h2>
+  <p class="sub" style="margin-bottom:40px">Analytics, e-commerce operations and development roles across the UAE, Canada and India.</p>
+  <div class="tl">
+    <div class="job">
+      <h3>Data Analyst / E-Commerce Operations</h3>
+      <div class="meta mono">Richmond Cellar / Premium Cellars · Abu Dhabi, UAE · 06/2025 – Present</div>
+      <ul>
+        <li>Run <b>2–3 structured A/B tests a month</b> on Meta Ads with a AED 4,000 monthly budget; found that range and pricing, not delivery speed, drove lower cost per order.</li>
+        <li>Size tests with power calculations and confirm winners with chi-square tests before reallocating budget.</li>
+        <li>Write SQL with CTEs and window functions on Shopify transactions to find top products by category and revenue share, reducing budget waste.</li>
+        <li>Built API extraction scripts for Shopify transactions and Meta ad metrics; automated a manual report.</li>
+        <li>Own end-to-end e-commerce performance, driving <b>14x monthly sales</b> in 9 months.</li>
+        <li>Track KPIs across GA, Search Console, Meta Ads, Shopify and Excel; build recurring reports and dashboards from Excel, SQL and ERP exports.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Junior Data Analyst</h3>
+      <div class="meta mono">Torelin Couplings · Remote, Canada · 03/2024 – 05/2025</div>
+      <ul>
+        <li>Delivered market research on the Canadian pipe coupling industry covering size, growth and segmentation, influencing the <b>2025 market expansion roadmap</b>.</li>
+        <li>Profiled competitors and benchmarked their pricing strategies.</li>
+        <li>Assisted in developing and deploying the company webpage.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Full Stack Developer</h3>
+      <div class="meta mono">OneTeam Solutions · Kerala, India · 09/2022 – 02/2023</div>
+      <ul>
+        <li>Built web applications with Python, Django and Django REST Framework.</li>
+        <li>Integrated third-party APIs, gaining hands-on experience pulling data from external sources.</li>
+        <li>Worked in agile sprints with Git/GitHub.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap rv">
+  <div class="eyebrow mono">// projects</div>
+  <h2>Selected projects</h2>
+  <p class="sub">Academic and internship work in research, data quality and dashboards.</p>
+  <div class="grid3">
+    <div class="card"><h3>The State of Non-Profit IT Report</h3><div class="meta mono">RoundTable Tech · NY, USA · 08–10/2024</div><p>Led a cross-functional team analysing IT practices across U.S. and Canadian nonprofits; cleaned survey data and built interactive Tableau dashboards on a compressed timeline.</p></div>
+    <div class="card"><h3>One-Star Michelin Restaurants</h3><div class="meta mono">Cambrian College · 03/2024</div><p>Visualised trends in cuisine, location and pricing in Tableau after handling missing values and inconsistencies.</p></div>
+    <div class="card"><h3>Dashboards with Dash &amp; Plotly</h3><div class="meta mono">DataCamp certification</div><p>Interactive Python dashboards, backed by Pandas data manipulation certification.</p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap rv">
+  <div class="eyebrow mono">// toolkit</div>
+  <h2>Skills &amp; education</h2>
+  <p class="sub">Maths foundations, business analytics training and a developer’s comfort with APIs.</p>
+  <div class="skills">
+    <div class="card"><h3>Analytics &amp; experimentation</h3><div class="chips"><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">R</span><span class="chip">Excel</span><span class="chip">A/B testing</span><span class="chip">Power analysis</span><span class="chip">Chi-square</span><span class="chip">GA4 funnels</span><span class="chip">UTM tracking</span><span class="chip">Segment analysis</span><span class="chip">LLM-assisted analysis</span></div></div>
+    <div class="card"><h3>E-commerce &amp; marketing data</h3><div class="chips"><span class="chip">GA4</span><span class="chip">Shopify</span><span class="chip">Meta Ads</span><span class="chip">Search Console</span><span class="chip">SEO</span></div></div>
+    <div class="card"><h3>BI &amp; visualisation</h3><div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Dash/Plotly</span><span class="chip">Dashboards</span></div></div>
+    <div class="card"><h3>Integration &amp; automation</h3><div class="chips"><span class="chip">Pandas</span><span class="chip">REST APIs</span><span class="chip">Django REST</span><span class="chip">Report automation</span><span class="chip">AWS</span><span class="chip">Git/GitHub</span></div></div>
+    <div class="card"><h3>Education</h3><p><b style="color:var(--text)">PGDP, Business Analytics</b><br>Cambrian College, ON, Canada</p><p style="margin-top:10px"><b style="color:var(--text)">Bachelor of Mathematics</b><br>University of Kerala, India</p></div>
+    <div class="card"><h3>Certifications</h3><p>Data Manipulation with Pandas · Dash &amp; Plotly Dashboards (DataCamp)<br>Full Stack Python Django Developer · Python Workshop (OneTeam)<br>TCPS 2 CORE 2022 · Panel on Research Ethics</p></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap rv">
+  <div class="eyebrow mono">// contact</div>
+  <h2>Let’s find what your data is hiding</h2>
+  <p class="sub" style="margin-inline:auto">Based in Abu Dhabi and open to data analyst roles in Dubai and across the UAE.</p>
+  <div class="cta"><a class="btn p" href="mailto:abhijithanil.ae@gmail.com">abhijithanil.ae@gmail.com</a><a class="btn" href="tel:+971542793434">+971 54 279 3434</a></div>
+</div></section>
+
+<footer>© <span id="y">2026</span> Abhijith Anilkumar · Abu Dhabi, UAE</footer>
+
+<div id="swl" aria-hidden="true"></div>
+<div id="swp"><svg width="18" height="20" viewBox="0 0 18 20" style="color:#ff4d1a"><path d="M1.5 1.5l5.6 16 2.6-6.6 6.7-2.6z" fill="currentColor" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg><span id="swt">Swarm rebuild</span><button id="swb">Skip</button></div>
+
+<script>
+(function(){
+  var r=document.documentElement;
+  try{var t=localStorage.getItem("theme");if(t)r.setAttribute("data-theme",t)}catch(e){}
+  document.getElementById("theme").onclick=function(){
+    var dark=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);
+    var n=dark?"light":"dark";r.setAttribute("data-theme",n);
+    try{localStorage.setItem("theme",n)}catch(e){}
+  };
+  document.getElementById("y").textContent=new Date().getFullYear();
+  /* ---- cursor swarm builds the page ---- */
+  var H=document.documentElement,L=document.getElementById("swl"),PT=document.getElementById("swt"),PB=document.getElementById("swb");
+  var D=document.createElement("div");D.id="swd";D.setAttribute("aria-hidden","true");document.body.appendChild(D);
+  var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var SEL="nav,.badge,h1,.lead,.sub,.eyebrow,.hero .cta,.stat,.layer,.case>div,.job,.card,.contact .cta,footer";
+  var PR=["font-size","padding","gap","fill","grid","align","contrast","hierarchy","tracking","margin","radius","weight"];
+  var AG=[];for(var q=0;q<20;q++)AG.push({c:"hsl("+((q*137.5)%360).toFixed(0)+",72%,46%)",p:[PR[q%12],PR[(q+5)%12]]});
+  var CUR='<svg width="18" height="20" viewBox="0 0 18 20"><path d="M1.5 1.5l5.6 16 2.6-6.6 6.7-2.6z" fill="currentColor" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg>';
+  var BL=[],PEND=[],DONE=[],busy=false,skip=false,over=false,maxS=0,nDone=0,nAll=0;
+
+  function rnd(a){return a[Math.floor(Math.random()*a.length)]}
+  function mj(t){return t*t*t*(10+t*(-15+6*t))}
+  function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+  function sl(ms){return new Promise(function(o){setTimeout(o,skip?0:ms)})}
+  function anim(dur,fn){
+    return new Promise(function(res){
+      if(skip){fn(1);res();return}
+      var t0=performance.now();
+      (function f(now){
+        var t=Math.min(1,Math.max(0,(now-t0)/dur));
+        fn(t);
+        if(t<1&&!skip)requestAnimationFrame(f);
+        else{if(t<1)fn(1);res()}
+      })(t0);
+    });
+  }
+  function dr(e){var x=0,y=0,n=e;while(n){x+=n.offsetLeft;y+=n.offsetTop;n=n.offsetParent}return{x:x,y:y,w:e.offsetWidth||1,h:e.offsetHeight||1}}
+  function add(cls,st,html,ms,lay){var d=document.createElement("div");d.className=cls;d.style.cssText=st;if(html)d.innerHTML=html;(lay||D).appendChild(d);if(ms)setTimeout(function(){d.remove()},skip?0:ms);return d}
+  function put(a){a.el.style.transform="translate("+a.x.toFixed(1)+"px,"+a.y.toFixed(1)+"px)"}
+  function press(a,d){a.sv.style.transform=d?"scale(.78)":"none"}
+  function ripple(a,x,y,lay){add("rp","--c:"+a.c+";left:"+(x+2)+"px;top:"+(y+2)+"px",0,650,lay)}
+  function drop(b){b.classList.add("out");setTimeout(function(){b.remove()},skip?0:400)}
+  function box(a,x,y,w,h,prop){return add("sel","--c:"+a.c+";left:"+x+"px;top:"+y+"px;width:"+w+"px;height:"+h+"px","<i></i><i></i><i></i><i></i><em>"+prop+"</em>")}
+  function setBox(b,x,y,w,h){var s=b.style;s.left=x.toFixed(1)+"px";s.top=y.toFixed(1)+"px";s.width=w.toFixed(1)+"px";s.height=h.toFixed(1)+"px"}
+  function fin(e){e.classList.remove("bx","on");var s=e.style;s.opacity=s.transform=s.clipPath=s.transformOrigin=s.transition=""}
+  function upd(){PT.textContent="Building "+nDone+"/"+nAll}
+
+  function curve(x0,y0,x1,y1,bf){
+    var dx=x1-x0,dy=y1-y0,d=Math.hypot(dx,dy)||1,nx=-dy/d,ny=dx/d;
+    var b=(Math.random()<.5?-1:1)*d*bf*(.5+Math.random()*.7),ph=Math.random()*6.28;
+    var c1x=x0+dx*.3+nx*b,c1y=y0+dy*.3+ny*b,c2x=x0+dx*.72+nx*b*.55,c2y=y0+dy*.72+ny*b*.55;
+    return function(s,t){
+      var u=1-s,x=u*u*u*x0+3*u*u*s*c1x+3*u*s*s*c2x+s*s*s*x1,y=u*u*u*y0+3*u*u*s*c1y+3*u*s*s*c2y+s*s*s*y1;
+      var tr=Math.sin(t*Math.PI)*.8;
+      return [x+Math.sin(t*37+ph)*tr,y+Math.cos(t*31+ph)*tr];
+    };
+  }
+  function glide(a,x1,y1,dur,bf,cb){
+    var f=curve(a.x,a.y,x1,y1,bf);
+    return anim(dur,function(t){var s=mj(t),p=f(s,t);a.x=p[0];a.y=p[1];put(a);if(cb)cb(s)});
+  }
+  async function mouse(a,tx,ty){
+    var d=Math.hypot(tx-a.x,ty-a.y);
+    if(d<3)return;
+    var ov=d>160?Math.min(16,d*.04):0,ux=(tx-a.x)/d,uy=(ty-a.y)/d;
+    await glide(a,tx+ux*ov,ty+uy*ov,Math.min(820,230+d*.4),.14);
+    if(ov)await glide(a,tx,ty,120,0);
+  }
+
+  function kindOf(e){
+    if(e.matches("h1,h2,.lead,.sub,.eyebrow,.badge,nav,footer"))return"wipe";
+    if(e.matches(".layer,.job,.case>div"))return"move";
+    if(e.matches(".hero .cta,.contact .cta"))return"resize";
+    return Math.random()<.5?"resize":"move";
+  }
+
+  async function edit(a,it){
+    var e=it.e,r=it.r,kind=it.kind,s0=.8,w0=Math.max(30,Math.min(r.w*.12,90)),off=null,cx,cy,b;
+    e.style.transition="none";e.style.transformOrigin="0 0";
+    if(kind==="resize"){cx=r.x+r.w*s0*(.15+Math.random()*.55);cy=r.y+Math.min(r.h*s0,50)*(.3+Math.random()*.4)}
+    else if(kind==="wipe"){cx=r.x+w0*(.2+Math.random()*.6);cy=r.y+Math.min(r.h,50)*(.3+Math.random()*.4)}
+    else{off={x:(Math.random()<.5?-1:1)*(34+Math.random()*40),y:16+Math.random()*22};cx=r.x+r.w*(.15+Math.random()*.6);cy=r.y+Math.min(r.h,50)*(.3+Math.random()*.4)}
+    var gx=off?cx+off.x:cx,gy=off?cy+off.y:cy;
+    var br=kind==="resize"?{x:r.x,y:r.y,w:r.w*s0,h:r.h*s0}:kind==="wipe"?{x:r.x,y:r.y,w:w0,h:r.h}:{x:r.x+off.x,y:r.y+off.y,w:r.w,h:r.h};
+    function paint(){
+      var w,h,k,qq;
+      if(kind==="resize"){
+        w=Math.max(r.w*s0,a.x-r.x);h=Math.max(r.h*s0,a.y-r.y);
+        k=Math.min(1.03,(w/r.w+h/r.h)/2);qq=(Math.min(k,1)-s0)/(1-s0);
+        e.style.opacity=Math.min(1,.2+qq*1.1);e.style.transform="scale("+k.toFixed(3)+")";
+        setBox(b,r.x,r.y,w,h);b.lastChild.textContent=Math.round(w)+" × "+Math.round(h);
+      }else if(kind==="wipe"){
+        w=Math.max(w0,Math.min(r.w,a.x-r.x));
+        e.style.opacity=1;e.style.clipPath="inset(-6px "+((1-w/r.w)*100).toFixed(2)+"% -6px -6px)";
+        setBox(b,r.x,r.y,w,r.h);b.lastChild.textContent=Math.round(w)+" × "+Math.round(r.h);
+      }else{
+        var ox=a.x-cx,oy=a.y-cy;
+        qq=1-Math.min(1,Math.hypot(ox,oy)/Math.hypot(off.x,off.y));
+        e.style.opacity=.2+.8*qq;e.style.transform="translate("+ox.toFixed(1)+"px,"+oy.toFixed(1)+"px)";
+        setBox(b,r.x+ox,r.y+oy,r.w,r.h);
+      }
+    }
+    await mouse(a,gx,gy);
+    await sl(40+Math.random()*60);
+    press(a,1);ripple(a,gx,gy);
+    b=box(a,br.x,br.y,br.w,br.h,a.p[0]);
+    paint();
+    await sl(80);press(a,0);
+    await sl(90+Math.random()*90);
+    var x1,y1;
+    if(kind==="move"){x1=cx;y1=cy}
+    else{
+      await mouse(a,kind==="resize"?r.x+r.w*s0:r.x+w0,kind==="resize"?r.y+r.h*s0:r.y+r.h/2);
+      await sl(40);
+      x1=r.x+r.w;y1=kind==="resize"?r.y+r.h:r.y+r.h/2;
+    }
+    press(a,1);
+    var d=Math.hypot(x1-a.x,y1-a.y);
+    await glide(a,x1,y1,Math.min(620,280+d*.45),kind==="move"?.1:.05,paint);
+    paint();
+    await sl(50);press(a,0);
+    b.lastChild.textContent=a.p[0];
+    setTimeout(function(){drop(b)},skip?0:260);
+    it.state=2;DONE.push(it);nDone++;upd();
+  }
+
+  async function idle(a){
+    var y0=window.scrollY+70,y1=window.scrollY+innerHeight-70;
+    var c=DONE.filter(function(it){return it.r.y+it.r.h>y0&&it.r.y<y1&&it.r.h<innerHeight*.6});
+    if(!c.length){await mouse(a,60+Math.random()*(innerWidth-160),y0+Math.random()*(y1-y0));await sl(120);return}
+    var it=rnd(c),r=it.r;
+    var x=r.x+r.w*(.15+Math.random()*.6),y=Math.max(y0,Math.min(y1,r.y+Math.min(r.h,60)*(.25+Math.random()*.5)));
+    await mouse(a,x,y);
+    await sl(40+Math.random()*50);
+    press(a,1);ripple(a,x,y);
+    var b=box(a,r.x,r.y,r.w,r.h,rnd(a.p));
+    await sl(90);press(a,0);
+    await sl(200+Math.random()*260);
+    drop(b);
+  }
+
+  function claim(){
+    while(PEND.length){
+      var it=PEND[0],front=(skip||window.scrollY>=maxS-2)?1e9:window.scrollY+innerHeight*.82;
+      if(it.r.y>=front)return null;
+      PEND.shift();
+      if(!skip&&it.r.y+it.r.h<window.scrollY-30){fin(it.e);it.state=2;DONE.push(it);nDone++;upd();continue}
+      return it;
+    }
+    return null;
+  }
+  async function worker(a){
+    while(!over){
+      var it=claim();
+      try{
+        if(it)await edit(a,it);
+        else if(PEND.length)await idle(a);
+        else break;
+      }catch(err){if(it)fin(it.e)}
+      await sl(it?30+Math.random()*120:0);
+    }
+  }
+
+  function director(){
+    return new Promise(function(res){
+      var vel=0,last=performance.now(),sy=0;
+      (function f(now){
+        if(over){res();return}
+        var dt=Math.min(now-last,50);last=now;
+        if(!skip&&maxS>0){
+          var front=sy+innerHeight*.82,ready=0;
+          for(var i=0;i<PEND.length;i++){if(PEND[i].r.y<front)ready++;else break}
+          var base=maxS/6000,m=ready>5?.12:ready>2?.45:ready===0?1.6:1;
+          var tv=sy>=maxS?0:base*m;
+          vel+=(tv-vel)*Math.min(1,dt/260);
+          sy=Math.min(maxS,sy+vel*dt);
+          window.scrollTo(0,sy);
+        }
+        requestAnimationFrame(f);
+      })(last);
+    });
+  }
+  function scrollBack(){
+    var y0=window.scrollY;
+    if(y0<2)return Promise.resolve();
+    return anim(Math.min(1100,350+y0*.18),function(t){window.scrollTo(0,y0*(1-ease(t)))});
+  }
+
+  function spawn(){
+    var W=innerWidth,V=innerHeight,n=AG.length;
+    AG.forEach(function(a,i){
+      var g=i/n*Math.PI*2,x=W/2+Math.cos(g)*(W/2+60),y=V/2+Math.sin(g)*(V/2+60);
+      var d=document.createElement("div");d.className="cur";d.style.color=a.c;d.innerHTML=CUR;
+      D.appendChild(d);a.el=d;a.sv=d.firstChild;a.x=x;a.y=y;put(a);
+    });
+  }
+
+  async function run(){
+    if(busy)return;busy=true;skip=false;over=false;
+    var t0=Date.now(),tm=setTimeout(function(){if(busy)skip=true},15000);
+    stopFollow();
+    H.style.scrollBehavior="auto";
+    H.classList.remove("boot");H.classList.add("sw-lock");
+    window.scrollTo(0,0);
+    L.textContent="";D.textContent="";
+    document.querySelectorAll(".rv").forEach(function(e){e.classList.add("in")});
+    BL=[].slice.call(document.querySelectorAll(SEL));
+    PEND=BL.map(function(e){return{e:e,r:dr(e),kind:kindOf(e),state:0}});
+    PEND.sort(function(p,q){return p.r.y-q.r.y||p.r.x-q.r.x});
+    DONE=[];nDone=0;nAll=PEND.length;
+    BL.forEach(function(e){e.classList.add("bx")});
+    maxS=Math.max(0,H.scrollHeight-innerHeight);
+    D.style.height=H.scrollHeight+"px";
+    spawn();
+    PB.textContent="Skip";upd();
+    try{
+      var dp=director();
+      await Promise.all(AG.map(worker));
+      over=true;await dp;
+    }catch(err){over=true}
+    clearTimeout(tm);
+    var sy=window.scrollY;
+    AG.forEach(function(a){a.y-=sy;L.appendChild(a.el);put(a)});
+    D.textContent="";
+    BL.forEach(fin);
+    skip=false;
+    PT.textContent="Built by 20 agents · "+((Date.now()-t0)/1000).toFixed(1)+"s";
+    if(!RM)startFollow();
+    await scrollBack();
+    H.classList.remove("sw-lock");H.style.scrollBehavior="";
+    PB.textContent="Replay";busy=false;
+  }
+
+  var P={x:innerWidth/2,y:innerHeight*.45},fol=false,raf=0,last=0;
+  function pt(e){var t=e.touches&&e.touches[0]?e.touches[0]:e;if(t.clientX!=null){P.x=t.clientX;P.y=t.clientY}}
+  ["pointermove","pointerdown","touchstart","touchmove"].forEach(function(n){addEventListener(n,pt,{passive:true})});
+  addEventListener("pointerdown",function(){if(fol)AG.forEach(function(a){ripple(a,a.x,a.y,L)})},{passive:true});
+  function startFollow(){
+    AG.forEach(function(a,i){a.o=i*Math.PI*2/AG.length;a.s=(i%2?-1:1)*(.00025+(i%5)*.00006);a.r=46+(i%4)*20;a.k=.05+((i*7)%10)*.012;press(a,0)});
+    PT.textContent+=" · following you";
+    fol=true;last=performance.now();
+    cancelAnimationFrame(raf);raf=requestAnimationFrame(tick);
+  }
+  function stopFollow(){fol=false;cancelAnimationFrame(raf)}
+  function tick(now){
+    if(!fol)return;
+    var dt=Math.min(now-last,64);last=now;
+    AG.forEach(function(a,i){
+      var g=a.o+now*a.s,rad=a.r+Math.sin(now/600+i*1.3)*5;
+      var tx=Math.min(Math.max(P.x+Math.cos(g)*rad,4),innerWidth-24),ty=Math.min(Math.max(P.y+Math.sin(g)*rad,4),innerHeight-28);
+      var k=1-Math.pow(1-a.k,dt/16.7);
+      a.x+=(tx-a.x)*k;a.y+=(ty-a.y)*k;
+      put(a);
+    });
+    raf=requestAnimationFrame(tick);
+  }
+  PB.addEventListener("click",function(){if(busy)skip=true;else run()});
+  if(RM){H.classList.remove("boot")}
+  else{Promise.race([document.fonts?document.fonts.ready:0,new Promise(function(o){setTimeout(o,900)})]).then(run)}
+  var els=document.querySelectorAll(".rv");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add("in")})}
+})();
+</script>
+</body>
+</html>
