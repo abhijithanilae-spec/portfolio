@@ -696,7 +696,7 @@ html.sw-lock{overflow:hidden}
     (async function(){
       var i=0;
       while(tok===cycTok){
-        await wait(2400);                                   /* hold the finished greeting */
+        await wait(1500);                                   /* hold the finished greeting */
         if(tok!==cycTok)return;
         var cur=graphemes(HI.textContent);
         HI.classList.remove("blink");
