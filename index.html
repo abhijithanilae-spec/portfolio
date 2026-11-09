@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="theme-color" content="#161316">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Abhijith Anilkumar — Data Analyst</title>
+<title>Abhijith Anilkumar | Data Analyst</title>
 <meta name="description" content="Data Analyst specialising in A/B testing, SQL and GA4 for e-commerce. Grew monthly sales 14x and lifted checkouts 30%.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F5F5F5;--surface:#EDEDED;--surface2:#E3E3E4;--text:#0B0B0C;--muted:#6E6E73;--line:#E0E0E1;
-  --accent:#111111;--accent2:#8E8E93;--glow:rgba(190,190,196,.28);--btnink:#fff;--grid:rgba(0,0,0,.03);
-  --pbg:#fff;--pink:#111;--shadow:0 2px 12px rgba(0,0,0,.08);
-  color-scheme:light;
-  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
-}
-:root[data-theme="dark"]{
-  --bg:#0E0E0F;--surface:#19191A;--surface2:#232325;--text:#F5F5F5;--muted:#9A9AA0;--line:#2A2A2C;
-  --accent:#F5F5F5;--accent2:#8E8E93;--glow:rgba(160,160,168,.14);--btnink:#111;--grid:rgba(255,255,255,.035);
-  --pbg:#F5F5F5;--pink:#111;--shadow:0 2px 14px rgba(0,0,0,.5);
+  --bg:#161316;--surface:rgba(255,255,255,.07);--surface2:rgba(255,255,255,.12);--text:#FFFFFF;--muted:#BABABA;--line:rgba(255,255,255,.17);
+  --accent:#FF6D29;--accent2:#FF6D29;--glow:rgba(255,109,41,.4);--btnink:#161316;--grid:rgba(255,255,255,.03);
+  --pbg:#FF6D29;--pink:#FFFFFF;--shadow:0 8px 30px rgba(0,0,0,.45);
   color-scheme:dark;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
@@ -34,10 +29,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .logo span{color:var(--accent)}
 .links{display:flex;gap:22px;font-size:14px;color:var(--muted);align-items:center}
 .links a:hover{color:var(--text)}
-#theme{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:15px}
 @media(max-width:720px){.links a{display:none}}
 .hero{padding:84px 0 56px;position:relative;isolation:isolate;background:radial-gradient(60% 50% at 80% 0%,var(--glow),transparent 70%)}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(var(--grid) 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/44px 44px;-webkit-mask-image:linear-gradient(#000 40%,transparent);mask-image:linear-gradient(#000 40%,transparent)}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);border:1px solid var(--line);background:var(--surface);padding:6px 12px;border-radius:99px}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--glow)}
 h1{font-size:clamp(38px,7vw,68px);line-height:1.05;letter-spacing:-.02em;margin:22px 0 16px}
@@ -119,9 +112,9 @@ html.sw-lock{overflow:hidden}
 .mk b{position:absolute;left:-9px;top:-14px;font:500 22px/1 "JetBrains Mono",ui-monospace,monospace}
 .mk em{position:absolute;left:8px;top:6px;background:var(--c)}
 @keyframes mk{0%{opacity:0;transform:scale(.6)}15%{opacity:1;transform:none}80%{opacity:1}100%{opacity:0}}
-#swp{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:60;display:flex;align-items:center;gap:10px;background:#fff;color:#111;border:1px solid #E0E0E1;border-radius:99px;padding:8px 8px 8px 14px;font:500 13px "Playfair Display",Georgia,serif;box-shadow:0 10px 40px rgba(0,0,0,.15);white-space:nowrap}
-#swb{background:#111;color:#fff;border:0;border-radius:99px;padding:9px 16px;font:inherit;cursor:pointer}
-#swb:hover{background:#333}
+#swp{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:60;display:flex;align-items:center;gap:10px;background:rgba(22,19,22,.6);color:#FFFFFF;border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:99px;padding:8px 8px 8px 14px;font:500 13px "Playfair Display",Georgia,serif;box-shadow:0 10px 40px rgba(0,0,0,.15);white-space:nowrap}
+#swb{background:#FF6D29;color:#161316;border:0;border-radius:99px;padding:9px 16px;font:inherit;cursor:pointer}
+#swb:hover{background:#FF8548}
 .rp{position:absolute;width:12px;height:12px;margin:-6px 0 0 -6px;border:2px solid var(--c);border-radius:50%;animation:rp .6s ease-out forwards}
 @keyframes rp{from{opacity:.9;transform:scale(.4)}to{opacity:0;transform:scale(3.2)}}
 .sel{animation:pp .25s ease-out}
@@ -134,19 +127,39 @@ html.sw-lock{overflow:hidden}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 .boot header>.wrap,.boot section>.wrap,.boot nav,.boot footer{opacity:0}
+
+/* ---- crimson / black / off-white + glass ---- */
+.orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.orbs i{position:absolute;border-radius:50%;filter:blur(70px)}
+.orbs i:nth-child(1){width:46vmax;height:46vmax;left:-20vmax;top:22vh;background:radial-gradient(circle,#FF6D29,transparent 68%);opacity:.55}
+.orbs i:nth-child(2){width:36vmax;height:36vmax;right:-16vmax;top:-10vmax;background:radial-gradient(circle,#453027,transparent 68%);opacity:.85}
+.orbs i:nth-child(3){width:30vmax;height:30vmax;left:20vw;bottom:-16vmax;background:radial-gradient(circle,#453027,transparent 68%);opacity:.9}
+nav{background:rgba(22,19,22,.55);-webkit-backdrop-filter:blur(20px) saturate(150%);backdrop-filter:blur(20px) saturate(150%)}
+.stat,.layer,.case,.card,.badge,.btn,.chip,.contact>.wrap{background:var(--surface);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 10px 32px rgba(0,0,0,.35)}
+.layer:hover,.card:hover,.stat:hover{background:var(--surface2);border-color:rgba(255,109,41,.6)}
+.chip{box-shadow:inset 0 1px 0 rgba(255,255,255,.08);border-radius:99px}
+.btn.p{background:linear-gradient(135deg,rgba(255,109,41,.96),rgba(214,80,24,.92));border-color:rgba(255,180,140,.45);color:#161316}
+.btn.p:hover{box-shadow:0 0 26px rgba(255,109,41,.6),inset 0 1px 0 rgba(255,255,255,.18)}
+.stat b,.layer .n,.eyebrow{color:var(--accent2)}
+h1 em{background:linear-gradient(90deg,#FFFFFF 10%,#FF6D29);-webkit-background-clip:text;background-clip:text}
+h1 em::after{background:var(--accent2)}
+.dot{background:var(--accent2)}
+.contact>.wrap{max-width:820px;border-radius:26px;padding:52px 22px}
+.sel i{background:#FFFFFF}
 </style>
 <script>document.documentElement.classList.add("boot");setTimeout(function(){document.documentElement.classList.remove("boot")},4000)</script>
 </head>
 <body>
+<div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
 <nav><div class="wrap">
-  <a class="logo mono" href="#top">abhijith<span>.</span>ae</a>
-  <div class="links"><a href="#stack">Approach</a><a href="#work">Case study</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a><button id="theme" aria-label="Toggle theme">◐</button></div>
+  <a class="logo mono" href="#top">abhijith<span>.</span>anilkumar</a>
+  <div class="links"><a href="#stack">Approach</a><a href="#work">Case study</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-  <span class="badge mono"><i class="dot"></i> Open to Data Analyst roles · Dubai &amp; UAE</span>
+  <span class="badge mono"><i class="dot"></i> Business Analyst · Abu Dhabi &amp; UAE</span>
   <h1 aria-label="Hi, I am Abhijith"><em id="hi">Hi, I am Abhijith</em></h1>
-  <p class="lead">I’m Abhijith Anilkumar, a Data Analyst with 2+ years in e-commerce analytics. I run structured A/B tests, unify Shopify and ad data with SQL and Python, and turn GA4 funnels into decisions that move revenue.</p>
+  <p class="lead">Business Analyst with 2+ years in e-commerce analytics. I run structured A/B tests, unify Shopify and ad data with SQL and Python, and turn GA4 funnels into decisions that move revenue.</p>
   <div class="cta"><a class="btn p" href="#work">See the impact</a><a class="btn" href="mailto:abhijithanil.ae@gmail.com">Get in touch</a><button class="btn swbtn">⚡ Swarm rebuild</button></div>
   <div class="stats">
     <div class="stat"><b class="mono">14x</b><small>Monthly sales, AED 17K → 250K in 9 months</small></div>
@@ -255,17 +268,10 @@ html.sw-lock{overflow:hidden}
 <footer>© <span id="y">2026</span> Abhijith Anilkumar · Abu Dhabi, UAE</footer>
 
 <div id="swl" aria-hidden="true"></div>
-<div id="swp"><svg width="18" height="20" viewBox="0 0 18 20" style="color:#6E6E74"><path d="M1.5 1.5l5.6 16 2.6-6.6 6.7-2.6z" fill="currentColor" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg><span id="swt">Swarm rebuild</span><button id="swb">Skip</button></div>
+<div id="swp"><svg width="18" height="20" viewBox="0 0 18 20" style="color:#FF6D29"><path d="M1.5 1.5l5.6 16 2.6-6.6 6.7-2.6z" fill="currentColor" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg><span id="swt">Swarm rebuild</span><button id="swb">Skip</button></div>
 
 <script>
 (function(){
-  var r=document.documentElement;
-  try{var t=localStorage.getItem("theme");if(t)r.setAttribute("data-theme",t)}catch(e){}
-  document.getElementById("theme").onclick=function(){
-    var dark=r.getAttribute("data-theme")!=="light";
-    var n=dark?"light":"dark";r.setAttribute("data-theme",n);
-    try{localStorage.setItem("theme",n)}catch(e){}
-  };
   document.getElementById("y").textContent=new Date().getFullYear();
   /* ---- cursor swarm builds the page ---- */
   var H=document.documentElement,L=document.getElementById("swl"),PT=document.getElementById("swt"),PB=document.getElementById("swb");
@@ -273,7 +279,7 @@ html.sw-lock{overflow:hidden}
   var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
   var SEL="nav,.badge,h1,.lead,.hero .cta,.stat,.eyebrow,h2,.sub,.layer,.case>div,.job,.card,.contact .cta,footer";
   var PR=["font-size","padding","gap","fill","grid","align","contrast","hierarchy","tracking","margin","radius","weight"];
-  var GR=["#5A5A60","#6E6E74","#4C4C52","#7A7A80","#62626A","#85858B"];var AG=[];for(var q=0;q<30;q++)AG.push({c:GR[q%GR.length],p:[PR[q%12],PR[(q+5)%12]]});
+  var GR=["#C94B12","#B8420F","#D4531A","#A83A0C","#CC5016","#B04A20"];var AG=[];for(var q=0;q<30;q++)AG.push({c:GR[q%GR.length],p:[PR[q%12],PR[(q+5)%12]]});
   var CUR='<svg width="18" height="20" viewBox="0 0 18 20"><path d="M1.5 1.5l5.6 16 2.6-6.6 6.7-2.6z" fill="currentColor" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg>';
   var BL=[],PEND=[],ALL=[],ptr=0,FOL=[],DONE=[],busy=false,skip=false,over=false,maxS=0,nDone=0,nAll=0;
 
@@ -621,11 +627,9 @@ html.sw-lock{overflow:hidden}
     BL.forEach(fin);
     skip=false;
     AG.forEach(tagOff);
-    FOL=AG.filter(function(a,i){return i%3===0});
-    var GO=AG.filter(function(a,i){return i%3!==0});
-    FOL.forEach(function(a){a.live=true});
+    FOL=[];
+    var GO=AG.slice();
     PT.textContent="Built by "+AG.length+" agents \u00b7 "+((Date.now()-t0)/1000).toFixed(1)+"s";
-    if(!RM)startFollow();
     await Promise.all([scrollBack(),Promise.all(GO.map(leave))]);
     H.classList.remove("sw-lock");H.style.scrollBehavior="";
     PB.textContent="Replay";busy=false;
