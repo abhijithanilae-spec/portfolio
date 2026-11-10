@@ -29,7 +29,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .logo span{color:var(--accent)}
 .links{display:flex;gap:22px;font-size:14px;color:var(--muted);align-items:center}
 .links a:hover{color:var(--text)}
-@media(max-width:720px){.links a{display:none}}
+@media(max-width:720px){.links a{display:none}.links a.proj{display:inline-block;color:var(--accent)}}
+.links a.proj{color:var(--accent)}
 .hero{padding:84px 0 56px;position:relative;isolation:isolate;background:radial-gradient(60% 50% at 80% 0%,var(--glow),transparent 70%)}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);border:1px solid var(--line);background:var(--surface);padding:6px 12px;border-radius:99px}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--glow)}
@@ -153,7 +154,7 @@ h1 em::after{background:var(--accent2)}
 <div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
 <nav><div class="wrap">
   <a class="logo mono" href="#top">abhijith<span>.</span>anilkumar</a>
-  <div class="links"><a href="#stack">Approach</a><a href="#work">Case study</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#stack">Approach</a><a href="#work">Case study</a><a class="proj" href="dashboard.html">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
@@ -239,7 +240,7 @@ h1 em::after{background:var(--accent2)}
   <p class="sub">Academic and internship work in research, data quality and dashboards.</p>
   <div class="grid3">
     <div class="card"><h3>The State of Non-Profit IT Report</h3><div class="meta mono">RoundTable Tech · NY, USA · 08–10/2024</div><p>Led a cross-functional team analysing IT practices across U.S. and Canadian nonprofits; cleaned survey data and built interactive Tableau dashboards on a compressed timeline.</p></div>
-    <div class="card"><h3>One-Star Michelin Restaurants</h3><div class="meta mono">Cambrian College · 03/2024</div><p>Visualised trends in cuisine, location and pricing in Tableau after handling missing values and inconsistencies.</p></div>
+    <a class="card" href="dashboard.html" style="display:block"><h3>Michelin Guide: where the stars are</h3><div class="meta mono">Interactive dashboard · open dataset</div><p>Explored ~20,000 Michelin Guide listings in a linked dashboard: filter by distinction, price tier, country and cuisine across a world map, heatmap, facilities analysis and a searchable restaurant finder. <span style="color:var(--accent)">View dashboard →</span></p></a>
     <div class="card"><h3>Dashboards with Dash &amp; Plotly</h3><div class="meta mono">DataCamp certification</div><p>Interactive Python dashboards, backed by Pandas data manipulation certification.</p></div>
   </div>
 </div></section>
