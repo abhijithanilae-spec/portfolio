@@ -31,6 +31,18 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .links a:hover{color:var(--text)}
 @media(max-width:720px){.links a{display:none}.links a.proj{display:inline-block;color:var(--accent)}}
 .links a.proj{color:var(--accent)}
+/* projects dropdown */
+.links .dd{position:relative}
+.links .dd>button{background:none;border:0;padding:0;font:inherit;color:var(--accent);cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.links .dd .car{font-size:11px;transition:transform .2s}
+.links .dd.open .car{transform:rotate(180deg)}
+.links .menu{position:absolute;top:100%;right:0;min-width:210px;padding:6px;margin-top:10px;background:color-mix(in srgb,var(--bg) 94%,#000);border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.35);opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .15s,transform .15s,visibility .15s}
+.links .menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+.links .dd.open .menu{opacity:1;visibility:visible;transform:none}
+.links .menu a{display:block;padding:9px 12px;border-radius:7px;color:var(--text);white-space:nowrap}
+.links .menu a:hover{background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+@media(hover:hover){.links .dd:hover .menu{opacity:1;visibility:visible;transform:none}.links .dd:hover .car{transform:rotate(180deg)}}
+
 .hero{padding:84px 0 56px;position:relative;isolation:isolate;background:radial-gradient(60% 50% at 80% 0%,var(--glow),transparent 70%)}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);border:1px solid var(--line);background:var(--surface);padding:6px 12px;border-radius:99px}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--glow)}
@@ -154,7 +166,7 @@ h1 em::after{background:var(--accent2)}
 <div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
 <nav><div class="wrap">
   <a class="logo mono" href="#top">abhijith<span>.</span>anilkumar</a>
-  <div class="links"><a href="#stack">Approach</a><a href="#work">Case study</a><a class="proj" href="dashboard.html">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#stack">Approach</a><a href="#work">Case study</a><div class="dd"><button type="button" class="proj" aria-haspopup="true" aria-expanded="false">Projects <span class="car" aria-hidden="true">▾</span></button><div class="menu" role="menu"><a role="menuitem" href="dashboard.html">Michelin Guide Project</a></div></div><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
@@ -241,7 +253,6 @@ h1 em::after{background:var(--accent2)}
   <div class="grid3">
     <div class="card"><h3>The State of Non-Profit IT Report</h3><div class="meta mono">RoundTable Tech · NY, USA · 08–10/2024</div><p>Led a cross-functional team analysing IT practices across U.S. and Canadian nonprofits; cleaned survey data and built interactive Tableau dashboards on a compressed timeline.</p></div>
     <a class="card" href="dashboard.html" style="display:block"><h3>Michelin Guide: where the stars are</h3><div class="meta mono">Interactive dashboard · open dataset</div><p>Explored ~20,000 Michelin Guide listings in a linked dashboard: filter by distinction, price tier, country and cuisine across a world map, heatmap, facilities analysis and a searchable restaurant finder. <span style="color:var(--accent)">View dashboard →</span></p></a>
-    <div class="card"><h3>Dashboards with Dash &amp; Plotly</h3><div class="meta mono">DataCamp certification</div><p>Interactive Python dashboards, backed by Pandas data manipulation certification.</p></div>
   </div>
 </div></section>
 
@@ -734,6 +745,16 @@ h1 em::after{background:var(--accent2)}
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
     els.forEach(function(e){io.observe(e)});
   }else{els.forEach(function(e){e.classList.add("in")})}
+})();
+</script>
+<script>
+(function(){
+  var dd=document.querySelector(".links .dd");if(!dd)return;
+  var b=dd.querySelector("button");
+  function set(o){dd.classList.toggle("open",o);b.setAttribute("aria-expanded",o)}
+  b.addEventListener("click",function(e){e.stopPropagation();set(!dd.classList.contains("open"))});
+  document.addEventListener("click",function(e){if(!dd.contains(e.target))set(false)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"){set(false);b.blur()}});
 })();
 </script>
 </body>
